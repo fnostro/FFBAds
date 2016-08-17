@@ -1,28 +1,23 @@
 (function () {
-	var MutationObserver;
 	var observer;
-	var target;
-	var options;
-
-	target = document.querySelector("div[id^='feed_stream'");
-
-	options = {
+	var target = document.querySelector("div[id^='feed_stream'");
+	var options = {
 		childList : true,
 		subtree : true
 	};
 
-	MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+	var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
 	if (MutationObserver && !observer) {
 		observer = new MutationObserver(function (mutations) {
 				try {
 					mutations.forEach(function (MR) {
-						console.log("( mutation: " + MR.target.id + " )");
+						//console.log("( mutation: " + MR.target.id + " )");
 
 						if (MR.target.matches("div[id^=hyperfeed_story_id]")) {
 							var hs = MR.target;
 
-							console.log("( + hyperfeed: " + hs.id + " )");
+							//console.log("( + hyperfeed: " + hs.id + " )");
 
 							var child_ad = hs.querySelector("a.uiStreamSponsoredLink");
 							if (child_ad) {
