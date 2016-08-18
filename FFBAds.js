@@ -1,42 +1,44 @@
-(function () {
-	var observer;
-	var target = document.querySelector("div[id^='feed_stream'");
-	var options = {
-		childList : true,
-		subtree : true
+
+(function AdObserver(AdHandler) {
+	this.target = document;
+	this.options = {
+		childList: true,
+		subtree: true
 	};
 
-	var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+	this.observer = null;
 
-	if (MutationObserver && !observer) {
-		observer = new MutationObserver(function (mutations) {
-				try {
-					mutations.forEach(function (MR) {
-						//console.log("( mutation: " + MR.target.id + " )");
+	if (window.MutationObserver && !this.observer)
+		this.observer = new MutationObserver(AdHandler);
 
-						if (MR.target.matches("div[id^=hyperfeed_story_id]")) {
-							var hs = MR.target;
-
-							//console.log("( + hyperfeed: " + hs.id + " )");
-
-							var child_ad = hs.querySelector("a.uiStreamSponsoredLink");
-							if (child_ad) {
-								console.log("( ++ ad found: hiding ->" + hs.id + " )");
-								hs.hidden = true;
-							}
-						}
-					});
-				} catch (e) {
-					console.log(e);
-				}
-
-			});
+	if (this.observer && this.target) {
 		try {
-			if (target)
-				observer.observe(target, options);
+			this.observer.observe(this.target, this.options);
 		} catch (e) {
 			console.log(e);
 		}
 	}
+})(defaultAdHandler);
 
-})();
+function defaultAdHandler(mutations) {
+	try {
+		mutations.forEach(function (MR) {
+			//console.log("( mutation: " + MR.target.id + " )");
+
+			if (MR.target.matches("div[id^=hyperfeed_story_id]")) {
+				var hs = MR.target;
+
+				//console.log("( + hyperfeed: " + hs.id + " )");
+
+				var child_ad = hs.querySelector("a.uiStreamSponsoredLink");
+				if (child_ad) {
+					console.log("( ++ hiding ad ->" + hs.id + " )");
+					hs.hidden = true;
+				}
+			}
+		});
+	} catch (e) {
+		console.log(e);
+	}
+
+}
