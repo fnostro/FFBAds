@@ -1,4 +1,3 @@
-
 (function AdObserver(AdHandler) {
 	this.target = document;
 	this.options = {
@@ -26,19 +25,16 @@ function defaultAdHandler(mutations) {
 			//console.log("( mutation: " + MR.target.id + " )");
 
 			if (MR.target.matches("div[id^=hyperfeed_story_id]")) {
-				var hs = MR.target;
 
 				//console.log("( + hyperfeed: " + hs.id + " )");
 
-				var child_ad = hs.querySelector("a.uiStreamSponsoredLink");
-				if (child_ad) {
-					console.log("( ++ hiding ad ->" + hs.id + " )");
-					hs.hidden = true;
+				if (MR.target.querySelector("a.uiStreamSponsoredLink")) {
+					console.log("( ++ hiding ad ->" + MR.target.id + " )");
+					MR.target.hidden = true;
 				}
 			}
 		});
 	} catch (e) {
 		console.log(e);
 	}
-
 }
