@@ -1,16 +1,18 @@
 {
-	"manifest_version" : 2,
+	"manifest_version": 2,
 
-	"name" : "Grrrrr",
-	"description" : "FFBAds",
-	"version" : "1.0",
+	"name": "Grrrrr",
+	"description": "FFBAds",
+	"version": "1.0",
+	"minimum_chrome_version": "27",
 
-	"permissions" : [		"tabs"	],
-	"content_scripts" : [{
-			"all_frames" : true,
-			"matches" : ["https://www.facebook.com/*"],
-			"js" : ["FFBAds.js"],
-			"run_at" : "document_end"
+	"permissions": [ "tabs" ],
+	"content_scripts": [
+		{
+			"all_frames": false,
+			"matches": [ "https://www.facebook.com/*" ],
+			"js": [ "FFBAds.js" ],
+			"run_at": "document_end"
 		}
 	]
 }
