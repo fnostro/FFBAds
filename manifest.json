@@ -14,7 +14,7 @@
 		{
 			"all_frames": false,
 			"matches": [ "https://www.facebook.com/*" ],
-			"js": [ "FFBAds.js" ],
+			"js": [ "FaceBlock.js" ],
 			"run_at": "document_end"
 		}
 	]
