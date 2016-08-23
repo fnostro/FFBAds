@@ -1,4 +1,4 @@
-# FFBAds
+# FaceBlock
 
 FB has placed ads on their main website.  I don't like ads...so....
 
@@ -7,9 +7,10 @@ Currently FB has removed all markers that uniquely identify an ad so filtering u
 
 This extension is working as of 18-Aug-2016.
 
-This project has the 2 files needed to build a Chrome extension:
+This project requires these files to build a Chrome extension:
   * manifest.json
   * FFBAds.js
+  * FaceBlock.jpg
   
 The javascript uses the MutationObserver to monitor "mutations" (newly added items) to the FB "wall" looking for ad criteria and, when found, hides the cuplrit.
 
