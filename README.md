@@ -9,7 +9,7 @@ This extension is working as of 18-Aug-2016.
 
 This project requires these files to build a Chrome extension:
   * manifest.json
-  * FFBAds.js
+  * FaceBlock.js
   * FaceBlock.jpg
   
 The javascript uses the MutationObserver to monitor "mutations" (newly added items) to the FB "wall" looking for ad criteria and, when found, hides the cuplrit.
