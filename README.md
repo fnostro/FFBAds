@@ -1,6 +1,14 @@
 # FaceBlock
 
-FB has placed ads on their main website.  I don't like ads...so....
+> ##Update 24-Aug-2016
+> I created a Chrome Extension but for whatever reason it cannot be Searched for in the Chrome Web Store so here is a direct 
+> [link to FaceBlock](https://chrome.google.com/webstore/detail/faceblock/elfjdommhjddccnkaddkmbkmndmgennl) if you'd like to try it.
+>
+> This repository is the source code for the extension.
+
+---
+
+##FB has placed ads on their main website.  I don't like ads...so....
 
 The folks at AdBlock are in a game of ping-pong with Facebook.
 Currently FB has removed all markers that uniquely identify an ad so filtering using CSS rules, IMO, is moot.
