@@ -9,8 +9,6 @@
 >
 > This repository is the source code for the extension.
 
----
-
 ##FB has placed ads on their main website.  I don't like ads...so....
 
 The folks at AdBlock are in a game of ping-pong with Facebook.
