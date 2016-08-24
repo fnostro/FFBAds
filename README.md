@@ -2,7 +2,10 @@
 
 > ##Update 24-Aug-2016
 > I created a Chrome Extension but for whatever reason it cannot be Searched for in the Chrome Web Store so here is a direct 
-> [link to FaceBlock](https://chrome.google.com/webstore/detail/faceblock/elfjdommhjddccnkaddkmbkmndmgennl) if you'd like to try it.
+> [link to FaceBlock in the Chrome Web Store](https://chrome.google.com/webstore/detail/faceblock/elfjdommhjddccnkaddkmbkmndmgennl) if you'd like to try it.
+>
+> Also, turns out there are a number of extensions named FaceBlock.  I should have searched before naming this extension. 
+> But apparently duplicated extension names are allowed so...
 >
 > This repository is the source code for the extension.
 
