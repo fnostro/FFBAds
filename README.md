@@ -2,6 +2,8 @@
 > ##Update 25-Aug-2016
 > The extension is now serachable from the web store, yay.
 
+<br />
+
 > ##Update 24-Aug-2016
 > I created a Chrome Extension but for whatever reason it cannot be Searched for in the Chrome Web Store so here is a direct 
 > [link to FaceBlock in the Chrome Web Store](https://chrome.google.com/webstore/detail/faceblock/elfjdommhjddccnkaddkmbkmndmgennl) if you'd like to try it.
