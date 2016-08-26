@@ -1,7 +1,7 @@
 # FaceBlock
 > ##Update 26-Aug-2016
 > + Removed uneeded permissions
-> + Added a badge to show cound of blocked ads
+> + Added a badge to show count of blocked ads
 
 <br />
 > ##Update 25-Aug-2016
