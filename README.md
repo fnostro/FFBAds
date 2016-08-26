@@ -1,4 +1,9 @@
 # FaceBlock
+> ##Update 26-Aug-2016
+> + Removed uneeded permissions
+> + Added a badge to show cound of blocked ads
+
+<br />
 > ##Update 25-Aug-2016
 > The extension is now serachable from the web store, yay.
 
