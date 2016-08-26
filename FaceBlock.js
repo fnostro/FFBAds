@@ -1,10 +1,12 @@
+CountOfBlocked = 0;
+
+
 (function AdObserver(AdHandler) {
 	this.target = document;
 	this.options = {
 		childList: true,
 		subtree: true
 	};
-
 	this.observer = null;
 
 	if (window.MutationObserver && !this.observer)
@@ -31,7 +33,9 @@ function defaultAdHandler(mutations) {
 				if (MR.target.querySelector("a.uiStreamSponsoredLink")) {
 					console.log("( ++ hiding ad ->" + MR.target.id + " )");
 					MR.target.hidden = true;
-				}
+					CountOfBlocked++;
+					chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
+                }
 			}
 		});
 	} catch (e) {

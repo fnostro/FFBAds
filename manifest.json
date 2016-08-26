@@ -2,10 +2,10 @@
   "manifest_version": 2,
 
   "name": "FaceBlock",
-  "author":  "Frank Nostro",
+  "author": "Frank Nostro",
   "short_name": "FAB",
   "description": "Blocks ads inserted into the facebook newsfeed",
-  "version": "20.16.8.25",
+  "version": "20.16.8.26",
   "minimum_chrome_version": "27",
 
   "icons": {
@@ -15,7 +15,11 @@
   "browser_action": {
     "default_icon": "FaceBlock.png"
   },
-  "permissions": [ "tabs" ],
+  "permissions": [
+    "background",
+    "http://*.facebook.com/*",
+    "https://*.facebook.com/*"
+  ],
   "content_scripts": [
     {
       "all_frames": false,
@@ -23,5 +27,8 @@
       "js": [ "FaceBlock.js" ],
       "run_at": "document_end"
     }
-  ]
+  ],
+  "background": {
+    "scripts": [ "background.js" ]
+  }
 }
