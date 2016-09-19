@@ -1,7 +1,7 @@
 # FaceBlock
 > ##Update 19-Sep-2016
-> I am aware that occasionally an ad will make it's way into the newsfeed.  As far as I can see there is no change to the FB html markup used in the newsstory feed.  For myself, it seems to happen when I view FB, then switch tabs and then switch back sometime later. 
-> I ususally just do a forced refresh (Ctrl-F5) to clear it up.  This is very sporadic and I'm ok issuing a refresh so I'm not going to spend time researching this further as it has not gotten to "Annoyance" level for me as yet.
+> <p>I am aware that occasionally an ad will make it's way into the newsfeed.  As far as I can see there is no change to the FB html markup used in the newsstory feed.  For myself, it seems to happen when I view FB, then switch tabs and then switch back sometime later. </p>
+> <p>I ususally just do a forced refresh (Ctrl-F5) to clear it up.  This is very sporadic and I'm ok issuing a refresh so I'm not going to spend time researching this further as it has not yet gotten to "Annoyance" level for me.</p>
 
 <br />
 > ##Update 26-Aug-2016
