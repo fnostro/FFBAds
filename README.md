@@ -1,6 +1,7 @@
 # FaceBlock
-> ##Update 21-Dec-2016
+> ##Update 21-Dec-2016 17:21
 > <p>OK that stupid initial sponsored link got to annoyance level. Fixed.</p>
+> <p>Will place in Chrome store asap</p>
 
 <br />
 > ##Update 19-Sep-2016
