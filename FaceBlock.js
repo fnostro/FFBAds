@@ -20,6 +20,12 @@ var CountOfBlocked = 0;
 			console.log(e);
 		}
 	}
+
+	if (nl = document.querySelectorAll("a.uiStreamSponsoredLink")) {
+		nl.forEach(function (n) {
+			ParentHyperFeedStoryContainerOf(n);
+		});
+	}
 })(defaultAdHandler);
 
 function defaultAdHandler(mutations) {
@@ -33,18 +39,6 @@ function defaultAdHandler(mutations) {
 
 				if (MR.target.querySelector("a.uiStreamSponsoredLink")) {
 					hideSponsoredContainer(MR.target);
-
-					//console.log("( ++ hiding ad ->" + MR.target.id + " )");
-					//MR.target.hidden = true;
-					//CountOfBlocked++;
-					//chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
-				}
-				else {
-					if (nl = document.querySelectorAll("a.uiStreamSponsoredLink")) {
-						nl.forEach(function (n) {
-							ParentHyperFeedStoryContainerOf(n);
-						});
-					}
 				}
 			}
 		});
@@ -56,7 +50,7 @@ function defaultAdHandler(mutations) {
 function ParentHyperFeedStoryContainerOf(n) {
 
 	if (n.matches("div[id^=hyperfeed_story_id]")) {
-		if (!isHidden(n))
+		if (!n.hidden)
 			hideSponsoredContainer(n);
 	}
 	else if (n.tagName == "BODY")
@@ -66,15 +60,13 @@ function ParentHyperFeedStoryContainerOf(n) {
 		ParentHyperFeedStoryContainerOf(n.parentNode);
 }
 
-function isHidden(e) {
-	return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
-}
+//function isHidden(e) {
+//	return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
+//}
 
 function hideSponsoredContainer(n) {
-	if (!n.hidden) {
-		console.log("( ++ hiding ad ->" + n.id + " )");
-		n.hidden = true;
-		CountOfBlocked++;
-		chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
-	}
+	console.log("( ++ hiding ad ->" + n.id + " )");
+	n.hidden = true;
+	CountOfBlocked++;
+	chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
 }
