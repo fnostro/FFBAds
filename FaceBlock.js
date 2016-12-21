@@ -1,4 +1,5 @@
-CountOfBlocked = 0;
+
+var CountOfBlocked = 0;
 
 
 (function AdObserver(AdHandler) {
@@ -31,14 +32,49 @@ function defaultAdHandler(mutations) {
 				//console.log("( + hyperfeed: " + hs.id + " )");
 
 				if (MR.target.querySelector("a.uiStreamSponsoredLink")) {
-					console.log("( ++ hiding ad ->" + MR.target.id + " )");
-					MR.target.hidden = true;
-					CountOfBlocked++;
-					chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
-                }
+					hideSponsoredContainer(MR.target);
+
+					//console.log("( ++ hiding ad ->" + MR.target.id + " )");
+					//MR.target.hidden = true;
+					//CountOfBlocked++;
+					//chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
+				}
+				else {
+					if (nl = document.querySelectorAll("a.uiStreamSponsoredLink")) {
+						nl.forEach(function (n) {
+							ParentHyperFeedStoryContainerOf(n);
+						});
+					}
+				}
 			}
 		});
 	} catch (e) {
 		console.log(e);
+	}
+}
+
+function ParentHyperFeedStoryContainerOf(n) {
+
+	if (n.matches("div[id^=hyperfeed_story_id]")) {
+		if (!isHidden(n))
+			hideSponsoredContainer(n);
+	}
+	else if (n.tagName == "BODY")
+		return null;
+
+	else
+		ParentHyperFeedStoryContainerOf(n.parentNode);
+}
+
+function isHidden(e) {
+	return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
+}
+
+function hideSponsoredContainer(n) {
+	if (!n.hidden) {
+		console.log("( ++ hiding ad ->" + n.id + " )");
+		n.hidden = true;
+		CountOfBlocked++;
+		chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
 	}
 }
