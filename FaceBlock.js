@@ -25,6 +25,7 @@ var CountOfBlocked = 0;
 		hideSponsoredLink(n);
 	});
 
+	chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
 
 })(mutationAdHandler);
 
