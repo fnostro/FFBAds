@@ -1,6 +1,8 @@
 # FaceBlock
 > ##Update 28-Dec-2016 15:43
 > <p>Facebook, in another move to annoy me, removed an identifying classname: uiStreamSponsoredLink...so here is the work around</p>
+> <p>Published to Chrome Store today (2016-12-28) but it takes about an hour to appear. <br>Make sure you see version is 20.16.12.28 </p>
+>[Link to Store](https://chrome.google.com/webstore/detail/faceblock/elfjdommhjddccnkaddkmbkmndmgennl)
 
 <br />
 > ##Update 21-Dec-2016 17:21
