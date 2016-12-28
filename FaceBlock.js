@@ -47,12 +47,16 @@ function mutationAdHandler(mutations) {
 }
 
 function hideSponsoredLink(n) {
-	// hide nodes containing html markup <a class="uiStreamSponsoredLink" ...>
-	if (n.querySelector("a.uiStreamSponsoredLink")) {
-		console.log("( ++ hiding ad ->" + n.id + " )");
-		n.hidden = true;
-		CountOfBlocked++;
-		chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
-	}
-}
+	// hide nodes containing html sponsored stories, aka ads
+	var arrayOfa = n.querySelectorAll("a[href]");
 
+	arrayOfa.forEach(function (a) {
+		if (a.innerText == "Sponsored") {
+			console.log("( ++ hiding ad ->" + n.id + " )");
+			n.hidden = true;
+			CountOfBlocked++;
+			chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
+			return true;
+		}
+	});
+}
