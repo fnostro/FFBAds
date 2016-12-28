@@ -1,4 +1,8 @@
 # FaceBlock
+> ##Update 28-Dec-2016 15:43
+> <p>Facebook, in another move to annoy me, removed an identifying classname: uiStreamSponsoredLink...so here is the work around</p>
+
+<br />
 > ##Update 21-Dec-2016 17:21
 > <p>OK that stupid initial sponsored link got to annoyance level. Fixed.</p>
 > <p>Will place in Chrome store asap</p>
