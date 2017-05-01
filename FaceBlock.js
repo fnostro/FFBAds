@@ -1,6 +1,15 @@
 
 var CountOfBlocked = 0;
 
+var BlockableHyperFeedItems = {
+	SponsoredAds: true,
+	MemoriesOfFriends: true
+};
+
+var BlockedItemCounts = {
+	Ads: 0,
+	Memories: 0
+};
 
 (function AdObserver(AdHandler) {
 	this.target = document;
@@ -9,6 +18,8 @@ var CountOfBlocked = 0;
 		subtree: true
 	};
 	this.observer = null;
+
+	//BlockableHyperFeedItems.FriendsMemories = chrome.storage.sync.get()
 
 	if (window.MutationObserver && !this.observer)
 		this.observer = new MutationObserver(AdHandler);
@@ -52,11 +63,49 @@ function hideSponsoredLink(n) {
 
 	arrayOfa.forEach(function (a) {
 		if (a.innerText == "Sponsored") {
-			console.log("( ++ hiding ad ->" + n.id + " )");
-			n.hidden = true;
-			CountOfBlocked++;
-			chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
-			return true;
+			HideThis(n, "++ hiding ad ->");
+			IncrementBlockedCount(1);
+		}
+
+		if (BlockableHyperFeedItems.MemoriesOfFriends && a.href.indexOf("onthisday") > -1) {
+			HideThis(n, "++ hiding memory ->");
+			IncrementBlockedCount(2)
 		}
 	});
 }
+
+function HideThis(n, prompt) {
+	if (!n.hidden) {
+		console.log("( " + prompt + n.id + " )");
+		n.hidden = true;
+	}
+}
+
+function IncrementBlockedCount(item) {
+	switch (item) {
+		case 1: // Ads
+			BlockedItemCounts.Ads++;
+			break;
+
+		case 2: // Memories
+			BlockedItemCounts.Memories++;
+			break
+	}
+
+	CountOfBlocked = BlockedItemCounts.Ads + BlockedItemCounts.Memories;
+
+	chrome.runtime.sendMessage({ "message": CountOfBlocked.toString() });
+}
+
+
+chrome.storage.onChanged.addListener(function (changes, namespace) {
+	for (key in changes) {
+		var storageChange = changes[key];
+		console.log('Storage key "%s" in namespace "%s" changed. ' +
+								'Old value was "%s", new value is "%s".',
+								key,
+								namespace,
+								storageChange.oldValue,
+								storageChange.newValue);
+	}
+});
