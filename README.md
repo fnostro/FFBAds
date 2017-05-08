@@ -6,7 +6,7 @@
 > <li>Added ability to block user content that contains the string " ago today".  This one is mostly for me.  I follow a page that posts "memory" like older, historical items that I don't wish to see so...</li>
 > <li>Added ability to enable/disable these new options and to save/restore these settings.</li>
 > </ul>
->[Link to Store (version 20.16.12.28)](https://chrome.google.com/webstore/detail/faceblock/elfjdommhjddccnkaddkmbkmndmgennl)
+>[Link to Store (version 20.17.5.8)](https://chrome.google.com/webstore/detail/faceblock/elfjdommhjddccnkaddkmbkmndmgennl)
 
 <br />
 > ##Update 28-Dec-2016 15:43
