@@ -5,7 +5,7 @@
   "author": "Frank Nostro",
   "short_name": "FAB",
   "description": "Blocks ads inserted into the facebook newsfeed",
-  "version": "20.17.05.08",
+  "version": "20.17.5.8",
   "minimum_chrome_version": "27",
   "icons": {
     "128": "FaceBlock.png"
