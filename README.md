@@ -1,30 +1,27 @@
-# FaceBlock
-> ##Update 08-May-2017
+# FaceBlock 
+[Link to Store (version 20.17.5.8)](https://chrome.google.com/webstore/detail/faceblock/elfjdommhjddccnkaddkmbkmndmgennl)
+
+>##Update 08-May-2017
 > <p>So, a few additions.</p>
 > <ul>
 > <li>Added ability to block Friends "Memories".  This seems to be a subset of FB's "On This Day" but without the ability to disable it</li>
 > <li>Added ability to block user content that contains the string " ago today".  This one is mostly for me.  I follow a page that posts "memory" like older, historical items that I don't wish to see so...</li>
 > <li>Added ability to enable/disable these new options and to save/restore these settings.</li>
 > </ul>
->[Link to Store (version 20.17.5.8)](https://chrome.google.com/webstore/detail/faceblock/elfjdommhjddccnkaddkmbkmndmgennl)
 
-<br />
-> ##Update 28-Dec-2016 15:43
-> <p>Facebook, in another move to annoy me, removed an identifying classname: uiStreamSponsoredLink...so here is the work around</p>
-> <p>Published to Chrome Store today (2016-12-28) but it takes about an hour to appear. <br>Make sure the version is 20.16.12.28 </p>
+>##Update 28-Dec-2016 15:43
+><p>Facebook, in another move to annoy me, removed an identifying classname: uiStreamSponsoredLink...so here is the work around</p>
+><p>Published to Chrome Store today (2016-12-28) but it takes about an hour to appear. <br>Make sure the version is 20.16.12.28 </p>
 >[Link to Store (version 20.16.12.28)](https://chrome.google.com/webstore/detail/faceblock/elfjdommhjddccnkaddkmbkmndmgennl)
 
-<br />
-> ##Update 21-Dec-2016 17:21
-> <p>OK that stupid initial sponsored link got to annoyance level. Fixed.</p>
-> <p>Will place in Chrome store asap</p>
+>##Update 21-Dec-2016 17:21
+><p>OK that stupid initial sponsored link got to annoyance level. Fixed.</p>
+><p>Will place in Chrome store asap</p>
 
-<br />
-> ##Update 19-Sep-2016
-> <p>I am aware that occasionally an ad will make it's way into the newsfeed.  As far as I can see there is no change to the FB html markup used in the newsstory feed.  For myself, it seems to happen when I view FB, then switch tabs and then switch back sometime later. </p>
-> <p>I ususally just do a forced refresh (Ctrl-F5) to clear it up.  This is very sporadic and I'm ok issuing a refresh so I'm not going to spend time researching this further as it has not yet gotten to "Annoyance" level for me.</p>
+>##Update 19-Sep-2016
+><p>I am aware that occasionally an ad will make it's way into the newsfeed.  As far as I can see there is no change to the FB html markup used in the newsstory feed.  For myself, it seems to happen when I view FB, then switch tabs and then switch back sometime later. </p>
+><p>I ususally just do a forced refresh (Ctrl-F5) to clear it up.  This is very sporadic and I'm ok issuing a refresh so I'm not going to spend time researching this further as it has not yet gotten to "Annoyance" level for me.</p>
 
-<br />
 > ##Update 26-Aug-2016
 > + Removed uneeded permissions
 > + Added a badge to show count of blocked ads
