@@ -1,0 +1,75 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+<head>
+    <title>FFBAds Options</title>
+    <style type="text/css">
+        #divOptions {
+            min-width: 400px;
+            min-height: 200px;
+            position: relative;
+        }
+
+        #status {
+            height: 2em;
+            padding: 3px;
+        }
+
+        .Options {
+            margin-left: 10px;
+            padding: 5px;
+        }
+
+
+            .Options label input {
+                vertical-align: middle;
+            }
+
+        .note {
+            font-size: .9em;
+            color: #888;
+            padding-left: 20px;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="divOptions">
+        <h2>Hide...</h2>
+        <div class="Options">
+            <label>
+                <input id="cbxSponsoredAds" type="checkbox" />
+                Sponsored Ads
+            </label>
+            <p class="note">My "Raison d'etre", if you really like ads, feel free to uncheck this :)</p>
+        </div>
+        <div class="Options">
+            <label>
+                <input id="cbxMemories" type="checkbox" />
+                Memories
+            </label>
+            <p class="note">
+                Created by your friends.  FB does not provide a way to disable Memories,
+                at least none that I can find. This is not to be confused with "On This Day"
+                items which can be disabled.
+            </p>
+        </div>
+        <div class="Options">
+            <label>
+                <input id="cbxAgoToday" type="checkbox" />
+                Old Stories
+            </label>
+            <p class="note">
+                I have some Liked pages that post old stories.  This blocks hyperfeed stories with
+                paragraph text that contains the string " ago today" as in "Four years ago today".
+            </p>
+        </div>
+    </div>
+    <div id="status"></div>
+    <script src="options.js"></script>
+</body>
+</html>
